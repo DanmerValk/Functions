@@ -3,6 +3,8 @@ using namespace std;
 void Fillrand(int arr[], const int n);
 void Print(int arr[], const int n);
 void Sort(int arr[], const int n);
+int Sum(int arr[], const int n);
+
 void main()
 {
 	setlocale(LC_ALL, "ru");
@@ -18,6 +20,8 @@ void main()
 	Print(brr, SIZE);
 	Sort(brr, SIZE);
 	Print(brr, SIZE);
+	Sum(arr, n);
+	//Print(arr, n);
 }
 void Fillrand(int arr[], const int n)
 {
@@ -48,4 +52,14 @@ void Sort(int arr[], const int n)
 			}
 		}
 	}
+	
+}
+int Sum(int arr[], const int n)
+{
+	int Sum = 0;
+	for (int i = 0; i < n; i++)
+	{
+		Sum += arr[i];	
+    }
+	return Sum\n;
 }
