@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 
 void Fillrand(int arr[], const int n);
@@ -36,14 +36,14 @@ void main()
 	Print(arr, n);
 	Sort(arr, n);
 	Print(arr, n);
-	cout << "ñóììà ýëåìåíòà ìàññèâà: " << Sum(arr, n) << endl;
-	cout << "ñðåäíå-àðèôìåòè÷åñêîå: " << Avg(arr, n) << endl;
-	cout << "ìèíèìàëüíîå çíà÷åíèå â ìàññèâå: " << MinValue(arr, n) << endl;
-	cout << "ììàêñèìàëüíîå çíà÷åíèå â ìàññèâå: " << MaxValue(arr, n) << endl;
-	cout << "ââåäèòå êîëëè÷åñòâî ñäâèãîâ: "; cin >> shifts;
+	cout << "ÑÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Sum(arr, n) << endl;
+	cout << "ÑÑ€ÐµÐ´Ð½Ðµ-Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ: " << Avg(arr, n) << endl;
+	cout << "Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << MinValue(arr, n) << endl;
+	cout << "Ð¼Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << MaxValue(arr, n) << endl;
+	cout << "Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ´Ð²Ð¸Ð³Ð¾Ð²: "; cin >> shifts;
 	ShiftLeft(arr, n, shifts);
 	Print(arr, n);
-	cout << "ââåäèòå êîëë÷åñòâî ñäâèãîâ: "; cin >> shifts;
+	cout << "Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð»Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ´Ð²Ð¸Ð³Ð¾Ð²: "; cin >> shifts;
 	ShiftLeft(arr, n, shifts);
 	Print(arr, n);
 
@@ -55,14 +55,14 @@ void main()
 	Print(brr, SIZE);
 	Sort(brr, SIZE);
 	Print(brr, SIZE);
-	cout << "ñóììà ýëåìåíòà ìàññèâà: " << Sum(brr, SIZE) << endl;
-	cout << "ñðåäíå-àðèôìåòè÷åñêîå: " << Avg(brr, SIZE) << endl;
-	cout << "ìèíèìàëüíîå çíà÷åíèå â ìàññèâå: " << MinValue(brr, SIZE) << endl;
-	cout << "ìàêñèìàëüíîå çíà÷åíèå â ìàññèâå: " << MaxValue(brr, SIZE) << endl;
-	cout << "ââåäèòå êîëë÷åñòâî ñäâèãîâ: "; cin >> shifts;
+	cout << "ÑÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Sum(brr, SIZE) << endl;
+	cout << "ÑÑ€ÐµÐ´Ð½Ðµ-Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ: " << Avg(brr, SIZE) << endl;
+	cout << "Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << MinValue(brr, SIZE) << endl;
+	cout << "Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << MaxValue(brr, SIZE) << endl;
+	cout << "Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð»Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ´Ð²Ð¸Ð³Ð¾Ð²: "; cin >> shifts;
 	ShiftLeft(brr, SIZE, shifts);
 	Print(brr, SIZE);
-	cout << "ââåäèòå êîëë÷åñòâî ñäâèãîâ: "; cin >> shifts;
+	cout << "Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð»Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ´Ð²Ð¸Ð³Ð¾Ð²: "; cin >> shifts;
 	ShiftLeft(brr, SIZE, shifts);
 	Print(brr, SIZE);
 
@@ -78,7 +78,8 @@ void Fillrand(double arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
 	{
-		arr[i] = rand() % 100;
+		arr[i] = rand() % 10000;
+		arr[i] /= 100;
 	}
 }
 void Print(int arr[], const int n)
@@ -121,7 +122,7 @@ void Sort(double arr[], const int n)
 		{
 			if (arr[j] < arr[i])
 			{
-				int buffer = arr[i];
+				double buffer = arr[i];
 				arr[i] = arr[j];
 				arr[j] = buffer;
 			}
@@ -140,7 +141,7 @@ int Sum(int arr[], const int n)
 }
 int Sum(double arr[], const int n)
 {
-	int Sum = 0;
+	double Sum = 0;
 	for (int i = 0; i < n; i++)
 	{
 		Sum += arr[i];
@@ -166,7 +167,7 @@ int MinValue(int arr[], const int n)
 }
 double MinValue(double arr[], const int n)
 {
-	int min = arr[0];
+	double min = arr[0];
 	for (int i = 1; i < n; i++)
 	{
 		if (arr[i] < min)min = arr[i];
@@ -184,7 +185,7 @@ int MaxValue(int arr[], const int n)
 }
 double MaxValue(double arr[], const int n)
 {
-	int max = arr[0];
+	double max = arr[0];
 	for (int i = 1; i < n; i++)
 	{
 		if (arr[i] > max)max = arr[i];
@@ -208,7 +209,7 @@ void ShiftLeft(double arr[], const int n, const int shifts)
 {
 	for (int i = 0; i < shifts; i++)
 	{
-		int buffer = arr[0];
+		double buffer = arr[0];
 		for (int i = 1; i < n; i++)
 		{
 			arr[i - 1] = arr[i];
