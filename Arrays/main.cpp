@@ -1,11 +1,18 @@
 ﻿#include<iostream>
 using namespace std;
 
+#define delimiter "\n*******************************k\n"
+
+const int ROWS = 4;
+const int COLS = 5;
+
 void Fillrand(int arr[], const int n);
 void Fillrand(double arr[], const int n);
+void Fillrand(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void Print(int arr[], const int n);
 void Print(double arr[], const int n);
+void Print(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void Sort(int arr[], const int n);
 void Sort(double arr[], const int n);
@@ -28,7 +35,6 @@ void ShiftLeft(double arr[], const int n, const int shifts);
 void ShiftRigth(int arr[], const int n, const int shifts);
 void ShiftRigth(double arr[], const int n, const int shifts);
 
-
 void main()
 {
 	setlocale(LC_ALL, "ru");
@@ -50,7 +56,6 @@ void main()
 	ShiftLeft(arr, n, shifts);
 	Print(arr, n);
 
-
 	const int SIZE = 8;
 	double brr[SIZE];
     //int shifts;
@@ -69,7 +74,18 @@ void main()
 	ShiftLeft(brr, SIZE, shifts);
 	Print(brr, SIZE);
 
+	cout << delimiter << endl;
+	int i_arr_2[ROWS][COLS] =
+	{
+		{3,5,8},
+	    {13,21,34},
+	    {55,89,144},
+	};
+	Fillrand(i_arr_2, ROWS, COLS);
+	Print(i_arr_2, ROWS, COLS);
+	
 }
+
 void Fillrand(int arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
@@ -85,6 +101,17 @@ void Fillrand(double arr[], const int n)
 		arr[i] /= 100;
 	}
 }
+void Fillrand(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			arr[i][j] = rand();
+		}
+	}
+}
+
 void Print(int arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
@@ -101,6 +128,19 @@ void Print(double arr[], const int n)
 	}
 	cout << endl;
 }
+void Print(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			cout << arr[i][j] << "\t";
+		}
+		cout << endl;
+	}
+		cout << endl;
+}
+
 void Sort(int arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
@@ -133,6 +173,7 @@ void Sort(double arr[], const int n)
 	}
 
 }
+
 int Sum(int arr[], const int n)
 {
 	int Sum = 0;
@@ -151,6 +192,7 @@ int Sum(double arr[], const int n)
 	}
 	return Sum;
 }
+
 double Avg(int arr[], const int n)
 {
 	return (double)Sum(arr, n) / n;
@@ -159,6 +201,7 @@ double Avg(double arr[], const int n)
 {
 	return (double)Sum(arr, n) / n;
 }
+
 int MinValue(int arr[], const int n)
 {
 	int min = arr[0];
@@ -177,6 +220,7 @@ double MinValue(double arr[], const int n)
 	}
 	return min;
 }
+
 int MaxValue(int arr[], const int n)
 {
 	int max = arr[0];
@@ -195,6 +239,7 @@ double MaxValue(double arr[], const int n)
 	}
 	return max;
 }
+
 void ShiftLeft(int arr[], const int n, const int shifts)
 {
 	for (int i = 0; i < shifts; i++)
@@ -221,6 +266,7 @@ void ShiftLeft(double arr[], const int n, const int shifts)
 	}
 
 }
+
 void ShiftRigrh(int arr[], const int n, const int shifts)
 {
 	for (int i = 0; i < shifts; i++)
