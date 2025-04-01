@@ -25,6 +25,9 @@ double MaxValue(double arr[], const int n);
 void ShiftLeft(int arr[], const int n, const int shifts);
 void ShiftLeft(double arr[], const int n, const int shifts);
 
+void ShiftRigth(int arr[], const int n, const int shifts);
+void ShiftRigth(double arr[], const int n, const int shifts);
+
 
 void main()
 {
@@ -215,6 +218,32 @@ void ShiftLeft(double arr[], const int n, const int shifts)
 			arr[i - 1] = arr[i];
 		}
 		arr[n - 1] = buffer;
+	}
+
+}
+void ShiftRigrh(int arr[], const int n, const int shifts)
+{
+	for (int i = 0; i < shifts; i++)
+	{
+		int buffer = arr[0];
+		for (int i = 1; i < n; i++)
+		{
+			arr[i + 1] = arr[i];
+		}
+		arr[n + 1] = buffer;
+	}
+
+}
+void ShiftRigth(double arr[], const int n, const int shifts)
+{
+	for (int i = 0; i < shifts; i++)
+	{
+		double buffer = arr[0];
+		for (int i = 1; i < n; i++)
+		{
+			arr[i + 1] = arr[i];
+		}
+		arr[n + 1] = buffer;
 	}
 
 }
