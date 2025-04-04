@@ -16,9 +16,11 @@ void Print(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void Sort(int arr[], const int n);
 void Sort(double arr[], const int n);
+//void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 int Sum(int arr[], const int n);
 int Sum(double arr[], const int n);
+//int Sum(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 double Avg(int arr[], const int n);
 double Avg(double arr[], const int n);
@@ -83,7 +85,8 @@ void main()
 	};
 	Fillrand(i_arr_2, ROWS, COLS);
 	Print(i_arr_2, ROWS, COLS);
-	
+	//Sort(i_arr_2, ROWS, COLS);
+	//Sum(i_arr_2, ROWS, COLS);
 }
 
 void Fillrand(int arr[], const int n)
@@ -173,6 +176,21 @@ void Sort(double arr[], const int n)
 	}
 
 }
+/*void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = i + 1; j < COLS; j++)
+		{
+			if (arr[j] < arr[i])
+			{
+				int buffer = arr[i];
+				arr[i] = arr[j];
+				arr[j] = buffer;
+			}
+		}
+	}
+}*/
 
 int Sum(int arr[], const int n)
 {
@@ -192,6 +210,7 @@ int Sum(double arr[], const int n)
 	}
 	return Sum;
 }
+
 
 double Avg(int arr[], const int n)
 {
