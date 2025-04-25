@@ -43,11 +43,11 @@ double MaxValue(double arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void ShiftLeft(int arr[], const int n, const int shifts);
 void ShiftLeft(double arr[], const int n, const int shifts);
-void ShiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, const int shifts);
-//void ShiftLeft(double arr[ROWS][COLS], const int ROWS, const int COLS);
+void ShiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS,  int shifts);
+//void ShiftLeft(double arr[ROWS][COLS], const int ROWS, int COLS);
 
-void ShiftRigth(int arr[], const int n, const int shifts);
-void ShiftRigth(double arr[], const int n, const int shifts);
+//void ShiftRigth(int arr[], const int n, const int shifts);
+//void ShiftRigth(double arr[], const int n, const int shifts);
 //void ShiftRigth(int arr[ROWS][COLS], const int ROWS, const int COLS, const int shifts);
 //void ShiftRigth(double arr[ROWS][COLS], const int ROWS, const int COLS);
 
@@ -86,9 +86,9 @@ void main()
 	cout << "введите коллчество сдвигов в лево: "; cin >> shifts;
 	ShiftLeft(arr, n, shifts);
 	Print(arr, n);
-	cout << "введите коллчество сдвигов в право: "; cin >> shifts;
-	ShiftRigth(arr, n, shifts);
-	Print(arr, n);	
+	//cout << "введите коллчество сдвигов в право: "; cin >> shifts;
+	//ShiftRigth(arr, n, shifts);
+	//Print(arr, n);	
 
 	cout << delimiter << endl;
 	int i_arr_2[ROWS][COLS] =
@@ -454,15 +454,16 @@ void ShiftLeft(double arr[], const int n, const int shifts)
 	}
 
 }
-void ShiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, const int shifts)
+void ShiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, int shifts)
 {
-	for (int i = 0; i < ROWS; i++)
+	/*for (int i = 0; i < ROWS; i++)
 	{
 		ShiftLeft(arr[i], COLS, shifts);
-    }
+    }*/
+	ShiftLeft(arr[0], ROWS * COLS, shifts);
 }
 
-void ShiftRigrh(int arr[], const int n, const int shifts)
+/*void ShiftRigrh(int arr[], const int n, const int shifts)
 {
 	for (int i = 0; i < shifts; i++)
 	{
@@ -474,13 +475,13 @@ void ShiftRigrh(int arr[], const int n, const int shifts)
 		arr[n + 1] = buffer;
 	}
 
-}
+}*/
 /*void ShiftRigrh(int arr[], const int n, const int shifts)
 {
 	ShiftRigrh(arr, n, n + shifts);
 
 }*/
-void ShiftRigth(double arr[], const int n, const int shifts)
+/*void ShiftRigth(double arr[], const int n, const int shifts)
 {
 	for (int i = 0; i < shifts; i++)
 	{
@@ -492,11 +493,12 @@ void ShiftRigth(double arr[], const int n, const int shifts)
 		arr[n + 1] = buffer;
 	}
 
-}
+}*/
 /*void ShiftRigth(int arr[ROWS][COLS], const int ROWS, const int COLS, const int shifts)
 {
 	for (int i = 0; i < ROWS; i++)
 	{
 		ShiftRigth(arr[i], COLS, shifts);
 	}
+
 }*/
